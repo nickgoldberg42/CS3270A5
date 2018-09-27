@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Done"
+        android:id="@+id/action_done"
+        android:icon="@drawable/ic_done_white_24dp"
+        app:showAsAction="always"/>
+    <item android:title="@string/zero_correct_count"
+        android:id="@+id/action_settings"></item>
+    <item android:title="@string/set_change_max"
+        android:id="@+id/action_settings1"></item>
+</menu>

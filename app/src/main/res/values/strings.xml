@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">CS3270A5 Goldberg</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="practice_making_change">Practice Making Change</string>
+    <string name="change_to_make">Change To Make</string>
+    <string name="ctm_number">CTM Number</string>
+    <string name="change_total_so_far">Change Total So Far</string>
+    <string name="csf_number">CSF Number</string>
+    <string name="time_remaining">Time Remaining</string>
+    <string name="tr_number">TR Number</string>
+    <string name="delete_warning">This image cannot be recovered if deleted.</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="show_dialog">Show Dialog</string>
+    <string name="dollar_50">$50</string>
+    <string name="dollar_20">$20</string>
+    <string name="dollar_10">$10</string>
+    <string name="dollar_5">$5</string>
+    <string name="dollar_1">$1</string>
+    <string name="cent_50">.50</string>
+    <string name="cent_25">.25</string>
+    <string name="cent_10">.10</string>
+    <string name="cent_05">.05</string>
+    <string name="cent_01">.01</string>
+    <string name="zero_correct_count">Zero Correct Count</string>
+    <string name="set_change_max">Set Change Max</string>
+</resources>
