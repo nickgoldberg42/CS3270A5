@@ -73,7 +73,7 @@ public class FragmentChangeResults extends Fragment {
             changeToMake.setText(sp.getString("changeToMake", (String)changeToMake.getText()));
         }
 
-        time = sp.getLong("timeRemaining", 30000);
+        time = sp.getLong("timeRemaining", 20000);
         changeNum = Double.longBitsToDouble(sp.getLong("changeValue", 100));
         changeMax(getMax);
     }
@@ -89,8 +89,9 @@ public class FragmentChangeResults extends Fragment {
         new CountDownTimer(time, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                if (timeRemaining != null)
+                if (timeRemaining != null) {
                     timeRemaining.setText("" + millisUntilFinished / 1000);
+                }
                 time = time - 1000;
             }
 

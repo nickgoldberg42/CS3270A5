@@ -28,17 +28,20 @@
     <FrameLayout
         android:id="@+id/fragOne"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></FrameLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
 
     <FrameLayout
         android:id="@+id/fragTwo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></FrameLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
 
     <FrameLayout
         android:id="@+id/fragThree"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></FrameLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
 
 
 

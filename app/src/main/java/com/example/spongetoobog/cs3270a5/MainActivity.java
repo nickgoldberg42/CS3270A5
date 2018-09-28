@@ -1,6 +1,7 @@
 package com.example.spongetoobog.cs3270a5;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,7 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DialogFragment.setChangeMax {
 
     private FragmentManager fm = getSupportFragmentManager();
     private FragmentChangeResults fragmentChangeResults;
@@ -29,7 +30,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         fm.beginTransaction().replace(R.id.fragOne, new FragmentChangeResults(), "fragCR")
-                .replace(R.id.fragTwo, new FragmentChangeButtons(), "fragCB").commit();
+                .replace(R.id.fragTwo, new FragmentChangeButtons(), "fragCB")
+                .replace(R.id.fragThree, new FragmentChangeActions(), "fragCA").commit();
+
+        fragmentChangeResults = (FragmentChangeResults)fm.findFragmentByTag("fragCR");
 
         Button btnShow = (Button) findViewById(R.id.btnShow);
         btnShow.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +41,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 DialogFragment dialog = new DialogFragment();
                 dialog.setCancelable(false);
-                dialog.show(fm, "delete_dialog");
+                dialog.show(fm, "change_dialog");
+            }
+        });
+
+        Button startOver = (Button) findViewById(R.id.startOver);
+        startOver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(fragmentChangeResults != null) {
+                    fragmentChangeResults.randomChange();
+                }
             }
         });
 
@@ -72,8 +86,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_settings1:
                 DialogFragment dialog = new DialogFragment();
                 dialog.setCancelable(true);
-                dialog.show(fm, "delete_dialog");
-                setChangeMax();
+                dialog.show(fm, "change_dialog");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -86,7 +99,10 @@ public class MainActivity extends AppCompatActivity {
         //code method to change correct count
     }
 
-    private void setChangeMax(){
 
+    @Override
+    public void setChangeMax(double x) {
+        fragmentChangeResults = (FragmentChangeResults)fm.findFragmentByTag("fragCR");
+        fragmentChangeResults.changeMax(x);
     }
 }
