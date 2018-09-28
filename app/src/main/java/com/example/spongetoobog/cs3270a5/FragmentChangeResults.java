@@ -107,7 +107,7 @@ public class FragmentChangeResults extends Fragment {
         if (root != null) {
             changeToMake = (TextView) root.findViewById(R.id.ctmNum);
         }
-        Random r = new Random();
+        Random r = new Random(System.currentTimeMillis());
         double change = max * r.nextDouble();
 
         changeNum = change;
