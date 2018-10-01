@@ -7,7 +7,7 @@
     <string name="change_to_make">Change To Make</string>
     <string name="ctm_number">CTM Number</string>
     <string name="change_total_so_far">Change Total So Far</string>
-    <string name="csf_number">CSF Number</string>
+    <string name="csf_number">$0.00</string>
     <string name="time_remaining">Time Remaining</string>
     <string name="tr_number">TR Number</string>
     <string name="delete_warning">This image cannot be recovered if deleted.</string>

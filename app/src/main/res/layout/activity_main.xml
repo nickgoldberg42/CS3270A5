@@ -7,7 +7,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -18,7 +17,6 @@
         android:elevation="4dp"
         app:titleTextColor="@android:color/white"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
     <Button
         android:id="@+id/btnShow"
         android:layout_width="wrap_content"
@@ -42,7 +40,4 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"></FrameLayout>
-
-
-
 </LinearLayout>
